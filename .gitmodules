@@ -1,0 +1,3 @@
+[submodule "CaptureUploader"]
+	path = CaptureUploader
+	url = https://github.com/Tangibleidea/CaptureUploader.git
