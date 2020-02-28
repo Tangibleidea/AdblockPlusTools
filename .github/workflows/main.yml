@@ -1,4 +1,4 @@
-name: CI
+name: Checkout submodules
 
 on:
   schedule:
@@ -12,4 +12,4 @@ jobs:
 
     steps:
     - name: Checkout submodules
-      uses: snickerbockers/submodules-init@v4
+      uses: textbook/git-checkout-submodule-action@2.1.1
