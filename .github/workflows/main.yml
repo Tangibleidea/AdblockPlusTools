@@ -6,10 +6,9 @@ on:
     - cron:  '*/60 * * * *'
 
 jobs:
-  build:
-
-    runs-on: ubuntu-latest
-
+  my_job:
+    name: deploy to staging
+    runs-on: ubuntu-18.04
     steps:
-    - name: Checkout submodules
-      uses: textbook/git-checkout-submodule-action@2.1.1
+      - name: git submodule
+        run: git submodule update --rebase --remote
