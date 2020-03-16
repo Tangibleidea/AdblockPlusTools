@@ -13,6 +13,6 @@ jobs:
         run: |
           git config --global user.email "fantasysa@gmail.com"
           git config --global user.name "Github action"
-          git submodule update --rebase --remote
+          git submodule update --recursive --remote --merge
           echo 'git commit -am "Update submodules. (by github action)"'
           git push
