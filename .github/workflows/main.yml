@@ -14,5 +14,5 @@ jobs:
           git config --global user.email "fantasysa@gmail.com"
           git config --global user.name "Github action"
           git submodule update --rebase --remote
-          git commit -am "Update submodules. (by github action)"
+          echo 'git commit -am "Update submodules. (by github action)"'
           git push
