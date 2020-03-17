@@ -1,6 +1,9 @@
 name: Update submodules
 
 on:
+  push:
+    branches: 
+      - master
   schedule:
     - cron: "0 0 * * *"
 
@@ -12,7 +15,9 @@ jobs:
       - name: update submodules
         run: |
           git config --global user.email "fantasysa@gmail.com"
-          git config --global user.name "Github action"
+          git config --global user.name "Mark"
           git submodule update --recursive --remote --merge
-          echo 'git commit -am "Update submodules. (by github action)"'
+          git diff
+          git add .
+          echo 'git commit -m "Update submodules. (by github action)"'
           git push
