@@ -1,3 +1,6 @@
 [submodule "CaptureUploader"]
 	path = CaptureUploader
 	url = https://github.com/Tangibleidea/CaptureUploader.git
+[submodule "Everyfilter"]
+	path = Everyfilter
+	url = https://github.com/Tangibleidea/Everyfilter
