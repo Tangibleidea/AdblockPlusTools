@@ -1,14 +1,23 @@
-name: Checkout submodules
+name: Update submodules
 
 on:
+  push:
+    branches: 
+      - master
   schedule:
-    # * is a special character in YAML so you have to quote this string
-    - cron:  '*/60 * * * *'
+    - cron: "0 0 * * *"
 
 jobs:
-  my_job:
-    name: deploy to staging
-    runs-on: ubuntu-18.04
+  build:
+    runs-on: ubuntu-latest
     steps:
-      - name: git submodule
-        run: git submodule update --rebase --remote
+      - uses: actions/checkout@v2
+      - name: update submodules
+        run: |
+          git config --global user.email "fantasysa@gmail.com"
+          git config --global user.name "Mark"
+          git submodule update --recursive --remote --merge
+          git diff
+          git add .
+          echo 'git commit -m "Update submodules. (by github action)"'
+          git push
