@@ -4,3 +4,6 @@
 [submodule "Everyfilter"]
 	path = Everyfilter
 	url = https://github.com/Tangibleidea/Everyfilter
+[submodule "FilterOrganizer"]
+	path = FilterOrganizer
+	url = https://github.com/Tangibleidea/FilterOrganizer.git
